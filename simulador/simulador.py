@@ -63,11 +63,11 @@ def calcular_racio_bc_final(va_beneficio_final, investimento):
     return va_beneficio_final / abs(investimento)
 
 # === Interface Streamlit ===
-st.title("💸 Simulador Financeiro Completo")
+st.title("Ferramenta de avaliação financeira")
 
-with st.expander("📘 Guia de Utilização"):
+with st.expander("Guia de Utilização"):
     st.markdown("""
-    ### 📥 Parâmetros de Entrada
+    ### Parâmetros de Entrada
 
     | Campo | Descrição | Relacionado com |
     |-------|-------------|-------------------|
@@ -102,7 +102,7 @@ with st.expander("📘 Guia de Utilização"):
     """)
 
 # === Interface de Entrada ===
-st.sidebar.header("🔢 Parâmetros de Entrada")
+st.sidebar.header("Parâmetros de Entrada")
 c0 = st.sidebar.number_input("Investimento Inicial (€)", value=10000.0)
 r = st.sidebar.number_input("Taxa de Juro (%)", value=5.0) / 100
 vf = st.sidebar.number_input("Valor Futuro Esperado (€)", value=11576.25)
@@ -120,7 +120,7 @@ custo_unit = st.sidebar.number_input("Custo por Unidade (€)", value=30.0)
 fluxos = [fluxo] * int(t)
 
 if st.sidebar.button("Calcular"):
-    st.subheader("📊 Resultados")
+    st.subheader("Resultados")
     st.write("**Valor Futuro:** €{:.2f}".format(calcular_valor_futuro(c0, r, t)))
     st.write("**Valor Atual:** €{:.2f}".format(calcular_valor_atual(vf, r, t)))
     st.write("**VAL:** €{:.2f}".format(calcular_val(c0, fluxos, r)))
