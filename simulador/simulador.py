@@ -82,7 +82,7 @@ with st.expander("Guia de Utilização"):
     | Preço por Unidade (€) | Preço de venda unitário | Break-even (quantidade) |
     | Custo por Unidade (€) | Custo de produção unitário | Break-even (quantidade) |
 
-    ### 📈 Como obter cada resultado
+    ### Como obter cada resultado
 
     | Resultado | Depende de |
     |-----------|------------|
